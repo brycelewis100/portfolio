@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.js": "/static/js/main.fc9d9e10.chunk.js",
+    "main.js.map": "/static/js/main.fc9d9e10.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6da852e7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6da852e7.js.map",
+    "static/js/2.36e4e589.chunk.js": "/static/js/2.36e4e589.chunk.js",
+    "static/js/2.36e4e589.chunk.js.map": "/static/js/2.36e4e589.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.36e4e589.chunk.js.LICENSE.txt": "/static/js/2.36e4e589.chunk.js.LICENSE.txt",
+    "static/media/Autocad.9e28ce4a.png": "/static/media/Autocad.9e28ce4a.png",
+    "static/media/CSS.a8f21e2c.png": "/static/media/CSS.a8f21e2c.png",
+    "static/media/Github.a7cb412d.png": "/static/media/Github.a7cb412d.png",
+    "static/media/HTML.33745ead.png": "/static/media/HTML.33745ead.png",
+    "static/media/Headshot.71fe4f2f.jpg": "/static/media/Headshot.71fe4f2f.jpg",
+    "static/media/Inventor.18a172ae.png": "/static/media/Inventor.18a172ae.png",
+    "static/media/Javascript.266bd9fb.png": "/static/media/Javascript.266bd9fb.png",
+    "static/media/Labview.b841dcd6.png": "/static/media/Labview.b841dcd6.png",
+    "static/media/Matlab.35c5effa.png": "/static/media/Matlab.35c5effa.png",
+    "static/media/Office.97b6e2d0.png": "/static/media/Office.97b6e2d0.png",
+    "static/media/React.f153eb9f.png": "/static/media/React.f153eb9f.png",
+    "static/media/Redux.ba0a91a0.png": "/static/media/Redux.ba0a91a0.png",
+    "static/media/Solidworks.24a9f01e.png": "/static/media/Solidworks.24a9f01e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6da852e7.js",
+    "static/js/2.36e4e589.chunk.js",
+    "static/js/main.fc9d9e10.chunk.js"
+  ]
+}
