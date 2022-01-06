@@ -29,24 +29,18 @@ function App() {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/about-me">
-              <Main />
-            </Route>
-            <Route exact path="/education">
-              <Education />
-            </Route>
-            <Route exact path="/contact">
-              <Contact />
-            </Route>
-            <Route exact path="/projects">
-              <Projects />
-            </Route>
-            <Route exact path="/projects/macro-calculator">
-              <MacroCalculator />
-            </Route>
             <Route exact path="/">
-              <Main />
+              <h1>Bryce Lewis Portfolio</h1>
             </Route>
+            <Route exact path="/about-me" component={Main} />
+            <Route exact path="/education" component={Education} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/projects" component={Projects} />
+            <Route
+              exact
+              path="/projects/macro-calculator"
+              component={MacroCalculator}
+            />
           </Switch>
         </div>
       </Router>

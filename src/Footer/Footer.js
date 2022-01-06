@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  makeStyles,
-  Typography,
-  Grid,
-  Paper,
-  Container,
-} from '@material-ui/core';
+import { Button, makeStyles, Grid, Paper, Container } from '@material-ui/core';
 import React from 'react';
 
 import Social from './Social';

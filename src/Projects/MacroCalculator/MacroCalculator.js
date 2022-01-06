@@ -1,26 +1,8 @@
-import React, { useState } from 'react';
-import {
-  Box,
-  Container,
-  Button,
-  Grid,
-  Paper,
-  Typography,
-  TextField,
-  MenuItem,
-  FormControl,
-  FormLabel,
-  FormControlLabel,
-  RadioGroup,
-  Radio,
-} from '@mui/material';
-import { makeStyles } from '@material-ui/core';
+import React from 'react';
+import { Box, Container } from '@mui/material';
 
 import InputForm from './Components/InputForm';
 import OutputForm from './Components/OutputForm';
-
-import Hero from '../../Hero/Hero';
-import Footer from '../../Footer/Footer';
 
 const MacroCalculator = (props) => {
   const [weight, setWeight] = React.useState('');
