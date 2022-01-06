@@ -91,6 +91,7 @@ const OutputForm = ({
         setWeightChange={setWeightChange}
         setCut={setCut}
         setBulk={setBulk}
+        setOptions={setOptions}
       />
 
       {submitted && (

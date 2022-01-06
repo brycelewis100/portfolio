@@ -56,16 +56,6 @@ const Message = ({
             >
               Switch to - 1 lb per week
             </Button>
-            {/* <Button
-              onClick={() => {
-                handleClose();
-              }}
-              style={{ marginTop: '15px', marginLeft: '30px' }}
-              variant="contained"
-              color="error"
-            > 
-              Ignore
-            </Button> */}
           </Box>
         </Modal>
       )}

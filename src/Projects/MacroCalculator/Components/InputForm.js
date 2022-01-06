@@ -57,9 +57,6 @@ const InputForm = ({
         value={weight}
         onChange={(e) => {
           setWeight(e.target.value);
-          // if (submitted) {
-          //   onSubmit();
-          // }
         }}
       />
       <TextField
@@ -69,9 +66,6 @@ const InputForm = ({
         value={heightFt}
         onChange={(e) => {
           setHeightFt(e.target.value);
-          // if (submitted) {
-          //   onSubmit();
-          // }
         }}
       />
       <TextField
@@ -81,9 +75,6 @@ const InputForm = ({
         value={heightIn}
         onChange={(e) => {
           setHeightIn(e.target.value);
-          // if (submitted) {
-          //   onSubmit();
-          // }
         }}
       />
       <TextField
@@ -93,9 +84,6 @@ const InputForm = ({
         value={age}
         onChange={(e) => {
           setAge(e.target.value);
-          // if (submitted) {
-          //   onSubmit();
-          // }
         }}
       />
 
@@ -106,9 +94,6 @@ const InputForm = ({
         value={activity}
         onChange={(e) => {
           setActivity(e.target.value);
-          // if (submitted) {
-          //   onSubmit();
-          // }
         }}
       >
         {activityLevelOptions.map((option) => (
