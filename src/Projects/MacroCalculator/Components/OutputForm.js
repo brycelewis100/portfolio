@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
   Box,
-  Container,
-  Button,
   Grid,
   Paper,
-  Typography,
   TextField,
-  MenuItem,
   FormControl,
   FormLabel,
   FormControlLabel,
@@ -15,8 +11,6 @@ import {
   Radio,
 } from '@mui/material';
 import Graph from './Graph';
-
-import { makeStyles } from '@material-ui/core';
 
 import Message from './Message';
 
@@ -85,10 +79,6 @@ const OutputForm = ({
         handleOpen={handleOpen}
         handleClose={handleClose}
         modalContext={modalContext}
-        setMacroBreakdown={setMacroBreakdown}
-        calcMacros={calcMacros}
-        BMRGoal={BMRGoal}
-        setWeightChange={setWeightChange}
         setCut={setCut}
         setBulk={setBulk}
         setOptions={setOptions}
@@ -201,7 +191,6 @@ const OutputForm = ({
                       label="BodyBuilder Cut"
                       onClick={() => {
                         handleOpen('cut');
-                        // setOptions('cut');
                       }}
                     />
                     <FormControlLabel
@@ -211,7 +200,6 @@ const OutputForm = ({
                       label="BodyBuilder Clean Bulk"
                       onClick={() => {
                         handleOpen('bulk');
-                        // setOptions('bulk');
                       }}
                     />
                   </RadioGroup>

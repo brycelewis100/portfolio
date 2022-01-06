@@ -1,20 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  Container,
-  Button,
-  Grid,
-  Paper,
-  Typography,
-  TextField,
-  MenuItem,
-  FormControl,
-  FormLabel,
-  FormControlLabel,
-  RadioGroup,
-  Radio,
-} from '@mui/material';
-import { makeStyles } from '@material-ui/core';
+import React, { useEffect } from 'react';
+import { Box, Button, TextField, MenuItem } from '@mui/material';
 
 import { activityLevelOptions, weightChangeOptions } from '../Assets/options';
 
