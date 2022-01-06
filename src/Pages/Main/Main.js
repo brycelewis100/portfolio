@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Button, Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { makeStyles } from '@material-ui/core';
 
 import Hero from '../../Hero/Hero';
