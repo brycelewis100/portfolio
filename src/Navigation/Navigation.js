@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  makeStyles,
-  Typography,
-  Grid,
-  Container,
-} from '@material-ui/core';
+import { Button, makeStyles, Grid, Container } from '@material-ui/core';
 import React from 'react';
 
 const useStyles = makeStyles((theme) => ({

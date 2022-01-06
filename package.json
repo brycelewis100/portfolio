@@ -18,7 +18,6 @@
     "react-vis": "^1.11.7",
     "web-vitals": "^1.0.1"
   },
-  "homepage": "http://brycelewis100.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
