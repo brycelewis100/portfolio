@@ -7,6 +7,7 @@ import Main from './Pages/Main/Main.js';
 import Education from './Pages/Education/Education.js';
 import Projects from './Pages/Projects/Projects.js';
 import Contact from './Pages/Contact/Contact.js';
+import MacroCalculator from './Projects/MacroCalculator/MacroCalculator.js';
 
 const theme = createTheme({
   palette: {
@@ -28,19 +29,22 @@ function App() {
       <Router>
         <div>
           <Switch>
-            <Route path="/education">
-              <Education />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-            <Route path="/about-me">
+            <Route exact path="/about-me">
               <Main />
             </Route>
-            <Route path="/">
+            <Route exact path="/education">
+              <Education />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
+            <Route exact path="/projects">
+              <Projects />
+            </Route>
+            <Route exact path="/projects/macro-calculator">
+              <MacroCalculator />
+            </Route>
+            <Route exact path="/">
               <Main />
             </Route>
           </Switch>
