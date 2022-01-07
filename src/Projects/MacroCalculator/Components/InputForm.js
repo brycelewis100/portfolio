@@ -18,13 +18,14 @@ const InputForm = ({
   setWeightChange,
   submitted,
   onSubmit,
+  macroBreakdown,
 }) => {
   useEffect(() => {
     if (submitted) {
       onSubmit();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [weight, heightFt, heightIn, age, activity, weightChange]);
+  }, [weight, heightFt, heightIn, age, activity, weightChange, macroBreakdown]);
 
   return (
     <Box
