@@ -77,6 +77,7 @@ const MacroCalculator = (props) => {
           submitted={submitted}
           setSubmitted={setSubmitted}
           onSubmit={onSubmit}
+          macroBreakdown={macroBreakdown}
         />
 
         <OutputForm

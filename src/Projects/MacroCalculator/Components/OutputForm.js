@@ -66,10 +66,10 @@ const OutputForm = ({
   }, [modalContext]);
 
   // updates Macros whenever the macroBreakdown changes
-  useEffect(() => {
-    calcMacros(BMRGoal, macroBreakdown);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [macroBreakdown]);
+  // useEffect(() => {
+  //   calcMacros(BMRGoal, macroBreakdown);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [macroBreakdown]);
 
   return (
     <Box>
