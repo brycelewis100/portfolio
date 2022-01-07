@@ -59,7 +59,7 @@ const Education = (props) => {
   const classes = useStyles();
 
   const heading = 'Education';
-  const caption = 'This is my Education';
+  const caption = 'ME turned Web Developer';
   const image =
     'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?cs=srgb&dl=pexels-pixabay-267885.jpg&fm=jpg';
   const btnLeft = 'About Me';
