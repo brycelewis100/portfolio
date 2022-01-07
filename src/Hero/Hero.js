@@ -73,11 +73,9 @@ const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
 
   const routeString = (btnString) => {
     const route = btnString.replace(/\s/g, '-').toLowerCase();
-    console.log(route);
 
     return `/${route}`;
   };
-  console.log(btnRight);
 
   return (
     <Paper
@@ -91,7 +89,7 @@ const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
         </div>
       </Box>
 
-      <Grid container xs={12} className={classes.content}>
+      <Grid container className={classes.content}>
         <Grid item xs={2} className={classes.buttonContainer}>
           {btnLeft === '' ? (
             <Button>{btnLeft}</Button>
