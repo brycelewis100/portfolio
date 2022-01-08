@@ -1,9 +1,11 @@
 import React from 'react';
-import { Box, Container, Button, Grid, Paper } from '@mui/material';
+import { Box, Container, Button, Grid, Paper, Typography } from '@mui/material';
 import { makeStyles } from '@material-ui/core';
 
 import Hero from '../../Hero/Hero';
 import Footer from '../../Footer/Footer';
+
+import SelfTaught from './Components/SelfTaught';
 
 // Javascript, React, CSS, Redux, HTML, Matlab, Autodesk Inventor, Solidworks, Microsoft Office, Github
 
@@ -75,14 +77,39 @@ const Education = (props) => {
       />
 
       <Container maxWidth="lg">
+        <h1>Self Study </h1>
+
+        <SelfTaught
+          title={`React and Typescript: Build a Portfolio Project`}
+          course={'Instructor - Steven Grider'}
+        />
+        <SelfTaught
+          title={`Typescript: The Complete Developer's Guide`}
+          course={'Instructor - Steven Grider'}
+        />
+        <SelfTaught
+          title={`Modern React with Redux`}
+          course={'Instructor - Steven Grider'}
+        />
+        <SelfTaught
+          title={`The Complete JavaScript Course 2022: From Zero to Expert!`}
+          course={'Instructor - Jonas Schedtmann'}
+        />
+        <SelfTaught
+          title={`Build Responsive Real-World Websites with HTML and CSS`}
+          course={'Instructor - Jonas Schedtmann'}
+        />
+
         <h1>Formal Education</h1>
         <Paper className={classes.card} elevation={3}>
           <Grid container xs={12}>
             <Grid item xs={9} className={classes.textContent}>
               <Box>
-                <h3>University of Nevada Reno</h3>
-                <p>Bachelors of Science: Mechanical Engineering</p>
-                <p>3.95 GPA</p>
+                <Typography variant="h6">University of Nevada Reno</Typography>
+                <Typography variant="subtitle1">
+                  Bachelors of Science: Mechanical Engineering
+                </Typography>
+                <Typography variant="subtitle1">3.95 GPA</Typography>
               </Box>
             </Grid>
             <Grid item xs={3} className={classes.image}>
@@ -92,8 +119,8 @@ const Education = (props) => {
             </Grid>
           </Grid>
         </Paper>
-        <h1>Competencies</h1>
 
+        <h1>Competencies</h1>
         <Grid container xs={12}>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>

@@ -55,6 +55,51 @@ const Projects = (props) => {
         <Paper className={classes.card} elevation={3}>
           <Box className={classes.textContent}>
             <Typography>
+              <h2 style={{ marginBottom: '0px' }}>Portfolio Website</h2>
+            </Typography>
+            <Grid container xs={12}>
+              <Grid className={classes.grid} item xs={5}>
+                <Box>
+                  <Typography>
+                    <h3>Summary</h3>
+                    <p>
+                      This project is designed to showcase my web development
+                      competence
+                    </p>
+                    <p style={{ paddingTop: '10px' }}></p>
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid className={classes.grid} item xs={4}>
+                <Typography>
+                  <h3>Technologies</h3>
+                  <ol>
+                    <li>Javascript</li>
+                    <li>React</li>
+                    <li>Material UI</li>
+                  </ol>
+                </Typography>
+              </Grid>
+              <Grid className={classes.buttons} item xs={3}>
+                <Box className={classes.button}>
+                  <Button
+                    style={{ alignSelf: 'right' }}
+                    onClick={() =>
+                      window.open('https://github.com/brycelewis100/portfolio')
+                    }
+                    variant="contained"
+                  >
+                    GitHub
+                  </Button>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+        </Paper>
+
+        <Paper className={classes.card} elevation={3}>
+          <Box className={classes.textContent}>
+            <Typography>
               <h2 style={{ marginBottom: '0px' }}>
                 Javascript Compiler and Notebook
               </h2>
