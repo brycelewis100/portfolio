@@ -55,13 +55,15 @@ const Contact = (props) => {
         <Paper elevation={3} className={classes.paper}>
           <Grid container style={{ marginTop: '30px' }}>
             <Grid className={classes.contactInfo} item xs={4}>
-              <h1> Contact Information</h1>
-              Go ahead and fill out the form and I will get back to you within
-              24 hours
-              <ul>
+              <Typography variant="h5"> Contact Information</Typography>
+              <Typography>
+                Go ahead and fill out the form and I will get back to you within
+                24 hours
+              </Typography>
+              <Typography variant="ul">
                 <li>brycelewis100@gmail.com</li>
                 <li>916-742-8175</li>
-              </ul>
+              </Typography>
             </Grid>
             <Grid item xs={8} className={classes.form}>
               <Box
@@ -86,7 +88,13 @@ const Contact = (props) => {
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                 />
-                <TextField id="email" label="Email" variant="outlined" />
+                <TextField
+                  id="email"
+                  label="Email"
+                  variant="outlined"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
                 <TextField
                   id="phone"
                   label="Phone (optional)"

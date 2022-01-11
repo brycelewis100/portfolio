@@ -1,7 +1,7 @@
 import { KeyboardReturnRounded } from '@material-ui/icons';
 import React from 'react';
 
-import { Box, Container, Button, Grid, Paper, Typography } from '@mui/material';
+import { Box, Grid, Paper, Typography } from '@mui/material';
 import { makeStyles } from '@material-ui/core';
 
 import UdemyLogo from '../Assets/Udemy.png';

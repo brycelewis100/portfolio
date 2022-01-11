@@ -18,6 +18,7 @@ import Solidworks from './Assets/Solidworks.png';
 import HTML from './Assets/HTML.png';
 import Inventor from './Assets/Inventor.png';
 import Javascript from './Assets/Javascript.png';
+import Typescript from './Assets/Typescript.png';
 import Office from './Assets/Office.png';
 import ReactLogo from './Assets/React.png';
 import ReduxLogo from './Assets/Redux.png';
@@ -54,6 +55,11 @@ const useStyles = makeStyles((theme) => ({
     width: '125px',
     height: '200px',
     objectFit: 'contain',
+  },
+  competencyButton: {
+    width: '200px',
+    height: '212px',
+    backgroundColor: 'transparent',
   },
 }));
 
@@ -124,7 +130,10 @@ const Education = (props) => {
         <Grid container xs={12}>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button style={{ width: '200px', height: '212px' }}>
+              <Button
+                onClick={() => window.open('https://www.javascript.com/')}
+                className={classes.competencyButton}
+              >
                 <img
                   src={Javascript}
                   alt="Javascript"
@@ -135,28 +144,57 @@ const Education = (props) => {
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button style={{ width: '200px', height: '212px' }}>
+              <Button
+                onClick={() => window.open('https://www.typescriptlang.org/')}
+                className={classes.competencyButton}
+              >
+                <img
+                  src={Typescript}
+                  alt="typescript"
+                  className={classes.logoBig}
+                ></img>
+              </Button>
+            </Paper>
+          </Grid>
+          <Grid item xs={3}>
+            <Paper className={classes.logoCard} elevation={3}>
+              <Button
+                onClick={() =>
+                  window.open('https://en.wikipedia.org/wiki/HTML')
+                }
+                className={classes.competencyButton}
+              >
                 <img src={HTML} alt="HTML" className={classes.logoBig}></img>
               </Button>
             </Paper>
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button
+                onClick={() => window.open('https://en.wikipedia.org/wiki/CSS')}
+                className={classes.competencyButton}
+              >
                 <img src={CSS} alt="CSS" className={classes.logo}></img>
               </Button>
             </Paper>
           </Grid>
+
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button
+                onClick={() => window.open('https://github.com/brycelewis100')}
+                className={classes.competencyButton}
+              >
                 <img src={Github} alt="Github" className={classes.logo}></img>
               </Button>
             </Paper>
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button
+                onClick={() => window.open('https://reactjs.org/')}
+                className={classes.competencyButton}
+              >
                 <img
                   src={ReactLogo}
                   alt="ReactLogo"
@@ -167,7 +205,10 @@ const Education = (props) => {
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button
+                onClick={() => window.open('https://redux.js.org/')}
+                className={classes.competencyButton}
+              >
                 <img
                   src={ReduxLogo}
                   alt="ReduxLogo"
@@ -178,21 +219,29 @@ const Education = (props) => {
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button
+                onClick={() =>
+                  window.open('https://www.mathworks.com/products/matlab.html')
+                }
+                className={classes.competencyButton}
+              >
                 <img src={Matlab} alt="Matlab" className={classes.logo}></img>
               </Button>
             </Paper>
           </Grid>
-          <Grid item xs={3}>
+          {/* <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button className={classes.competencyButton}>
                 <img src={Labview} alt="Labview" className={classes.logo}></img>
               </Button>
             </Paper>
-          </Grid>
+          </Grid> */}
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button
+                onClick={() => window.open('https://www.solidworks.com/')}
+                className={classes.competencyButton}
+              >
                 <img
                   src={Solidworks}
                   alt="Solidworks"
@@ -203,7 +252,12 @@ const Education = (props) => {
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button
+                onClick={() =>
+                  window.open('https://www.autodesk.com/products/inventor')
+                }
+                className={classes.competencyButton}
+              >
                 <img
                   src={Inventor}
                   alt="Inventor"
@@ -214,14 +268,24 @@ const Education = (props) => {
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button
+                onClick={() =>
+                  window.open('https://www.autodesk.com/products/autocad')
+                }
+                className={classes.competencyButton}
+              >
                 <img src={Autocad} alt="Autocad" className={classes.logo}></img>
               </Button>
             </Paper>
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.logoCard} elevation={3}>
-              <Button>
+              <Button
+                onClick={() =>
+                  window.open('https://www.microsoft.com/en-us/microsoft-365')
+                }
+                className={classes.competencyButton}
+              >
                 <img src={Office} alt="Office" className={classes.logo}></img>
               </Button>
             </Paper>
