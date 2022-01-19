@@ -1,4 +1,3 @@
-import { KeyboardReturnRounded } from '@material-ui/icons';
 import React from 'react';
 
 import { Box, Grid, Paper, Typography } from '@mui/material';
@@ -14,9 +13,12 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     backgroundColor: '#999',
-    margin: '15px 15px 0px 15px',
-    paddingTop: '20px',
-    paddingBottom: '20px',
+    margin: '10px 10px 0px 10px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+  },
+  udemy: {
+    width: '75%',
   },
 }));
 
@@ -41,11 +43,7 @@ const SelfTaught = ({ title, course }) => {
               paddingRight: '10px',
             }}
           >
-            <img
-              style={{ height: '100px', objectFit: 'scale-down' }}
-              src={UdemyLogo}
-              alt="udemy"
-            ></img>
+            <img className={classes.udemy} src={UdemyLogo} alt="udemy"></img>
           </Box>
         </Grid>
       </Grid>

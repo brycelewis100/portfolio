@@ -32,9 +32,7 @@ function App() {
               <h1>Bryce Lewis Portfolio</h1>
             </Route>
             <Route exact path="/about-me" component={Main} />
-            <Route exact path="/education" component={Education} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/projects" component={Projects} />
             <Route
               exact
               path="/projects/macro-calculator"
