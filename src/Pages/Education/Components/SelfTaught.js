@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Box, Grid, Paper, Typography } from '@mui/material';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Box, Grid, Paper, Typography } from '@material-ui/core';
 
 import UdemyLogo from '../Assets/Udemy.png';
 
@@ -12,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(5),
   },
   card: {
-    backgroundColor: '#999',
     margin: '10px 10px 0px 10px',
     paddingTop: '10px',
     paddingBottom: '10px',

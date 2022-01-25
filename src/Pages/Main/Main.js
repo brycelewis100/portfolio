@@ -1,6 +1,11 @@
 import React from 'react';
-import { Box, Grid, Typography, Container } from '@mui/material';
-import { makeStyles } from '@material-ui/core';
+import {
+  makeStyles,
+  Box,
+  Grid,
+  Typography,
+  Container,
+} from '@material-ui/core';
 
 import Hero from '../../Hero/Hero';
 import Footer from '../../Footer/Footer';

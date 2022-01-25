@@ -1,30 +1,30 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
 import Main from './Pages/Main/Main.js';
-import Education from './Pages/Education/Education.js';
-import Projects from './Pages/Projects/Projects.js';
 import Contact from './Pages/Contact/Contact.js';
 import MacroCalculator from './Projects/MacroCalculator/MacroCalculator.js';
+import {
+  blue,
+  green,
+  orange,
+  purple,
+  red,
+  yellow,
+} from '@material-ui/core/colors';
 
 const theme = createTheme({
   palette: {
-    primary: {
-      main: '#222',
-    },
-    secondary: {
-      main: '#FAF9F6',
-    },
-    tertiary: {
-      main: '#E33E7F',
-    },
+    primary: purple,
+    secondary: blue,
+    tertiary: green,
   },
 });
 
 function App() {
   return (
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <Router>
         <div>
           <Switch>
@@ -41,7 +41,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 }
 

@@ -1,6 +1,13 @@
 import React from 'react';
-import { Box, Container, Button, Grid, Paper, Typography } from '@mui/material';
-import { makeStyles } from '@material-ui/core';
+import {
+  makeStyles,
+  Box,
+  Container,
+  Button,
+  Grid,
+  Paper,
+  Typography,
+} from '@material-ui/core';
 
 import SelfTaught from './Components/SelfTaught';
 
@@ -34,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   card: {
-    backgroundColor: '#999',
     margin: '15px 15px 0px 15px',
   },
   logoCard: {

@@ -1,6 +1,12 @@
 import React from 'react';
-import { Box, Container, Button, Grid, Paper, Typography } from '@mui/material';
-import { makeStyles } from '@material-ui/core';
+import {
+  makeStyles,
+  Box,
+  Button,
+  Grid,
+  Paper,
+  Typography,
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   textContent: {
@@ -25,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   card: {
-    backgroundColor: '#999',
     margin: '15px 15px 0px 15px',
   },
 }));
@@ -72,6 +77,7 @@ const Projects = (props) => {
                     window.open('https://github.com/brycelewis100/portfolio')
                   }
                   variant="contained"
+                  color="primary"
                 >
                   GitHub
                 </Button>
@@ -131,6 +137,7 @@ const Projects = (props) => {
                     window.open('https://github.com/brycelewis100/jsjournal')
                   }
                   variant="contained"
+                  color="primary"
                 >
                   GitHub
                 </Button>
@@ -175,7 +182,11 @@ const Projects = (props) => {
             </Grid>
             <Grid className={classes.buttons} item xs={3}>
               <Box className={classes.button}>
-                <Button href="/projects/macro-calculator" variant="contained">
+                <Button
+                  href="/projects/macro-calculator"
+                  variant="contained"
+                  color="primary"
+                >
                   View
                 </Button>
               </Box>
@@ -187,6 +198,7 @@ const Projects = (props) => {
                     )
                   }
                   variant="contained"
+                  color="primary"
                 >
                   GitHub
                 </Button>
@@ -223,10 +235,14 @@ const Projects = (props) => {
             </Grid>
             <Grid className={classes.buttons} item xs={3}>
               <Box className={classes.button}>
-                <Button variant="contained">View</Button>
+                <Button variant="contained" color="primary">
+                  View
+                </Button>
               </Box>
               <Box className={classes.button}>
-                <Button variant="contained">GitHub</Button>
+                <Button variant="contained" color="primary">
+                  GitHub
+                </Button>
               </Box>
             </Grid>
           </Grid>
