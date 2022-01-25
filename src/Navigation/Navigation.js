@@ -32,12 +32,12 @@ const Navigation = (props) => {
               </Button>
             </Grid>
             <Grid item xs={3} className={classes.buttonContainer}>
-              <Button href="/education" className={classes.button}>
+              <Button href="#education" className={classes.button}>
                 Education
               </Button>
             </Grid>
             <Grid item xs={3} className={classes.buttonContainer}>
-              <Button href="/projects" className={classes.button}>
+              <Button href="#projects" className={classes.button}>
                 Projects
               </Button>
             </Grid>

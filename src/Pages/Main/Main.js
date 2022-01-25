@@ -46,24 +46,24 @@ const Main = (props) => {
       />
       <Container maxWidth="lg">
         <Grid container>
-          <Grid item xs={6} style={{ alignSelf: 'center' }}>
-            <Typography variant="h4">About me</Typography>
-            <p>
+          <Grid id="about-me" item xs={6} style={{ alignSelf: 'center' }}>
+            <Typography variant="h1">About me</Typography>
+            <Typography variant="body1">
               I'm a Mechanical Engineering graduate from the University of
               Nevada Reno who is working to transition into Front-End Web
               Development.
-            </p>
-            <p>
+            </Typography>
+            <Typography variant="body1">
               In the Engineering World, I am skilled and experienced with
               Drafting, Technical Documentation, Team Leadership, ERP
               integration, and Software/ Hardware Troubleshooting.
-            </p>
-            <p>
+            </Typography>
+            <Typography variant="body1">
               {' '}
               On the Web-Development side, I have focused my attention on JS,
               React, Redux, and Node JS, and I am continuing to expand my
               skillset.
-            </p>
+            </Typography>
           </Grid>
           <Grid item xs={6} className={classes.centerContainer}>
             <img
@@ -73,8 +73,8 @@ const Main = (props) => {
             ></img>
           </Grid>
         </Grid>
-        <Education />
-        <Projects />
+        <Education id="education" />
+        <Projects id="projects" />
       </Container>
       <Footer />
     </Box>

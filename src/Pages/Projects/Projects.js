@@ -39,18 +39,18 @@ const Projects = (props) => {
   const classes = useStyles();
 
   return (
-    <Box>
-      <h1>Projects</h1>
+    <Box id="projects">
+      <Typography variant="h1">Projects</Typography>
       <Paper className={classes.card} elevation={3}>
         <Box className={classes.textContent}>
-          <Typography>
-            <h2 style={{ marginBottom: '0px' }}>Portfolio Website</h2>
+          <Typography variant="h3" style={{ marginBottom: '0px' }}>
+            Portfolio Website
           </Typography>
           <Grid container xs={12}>
             <Grid className={classes.grid} item xs={5}>
               <Box>
                 <Typography>
-                  <h3>Summary</h3>
+                  <Typography variant="subtitle1">Summary</Typography>
                   <p>
                     This project is designed to showcase my web development
                     competence
@@ -61,7 +61,7 @@ const Projects = (props) => {
             </Grid>
             <Grid className={classes.grid} item xs={4}>
               <Typography>
-                <h3>Technologies</h3>
+                <Typography variant="subtitle1">Technologies</Typography>
                 <ol>
                   <li>Javascript</li>
                   <li>React</li>
@@ -89,37 +89,35 @@ const Projects = (props) => {
 
       <Paper className={classes.card} elevation={3}>
         <Box className={classes.textContent}>
-          <Typography>
-            <h2 style={{ marginBottom: '0px' }}>
-              Javascript Compiler and Notebook
-            </h2>
+          <Typography variant="h3" style={{ marginBottom: '0px' }}>
+            Javascript Compiler and Notebook
           </Typography>
           <Grid container xs={12}>
             <Grid className={classes.grid} item xs={5}>
               <Box>
-                <Typography>
-                  <h3>Summary</h3>
-                  <p>
-                    This project is designed to allow a user to write and
-                    compile code in the browser. The information saves to a file
-                    on their local computer so that when they relaunch the
-                    application, all of their data is saved. Calls can be added,
-                    deleted, and reorganized.
-                  </p>
-                  <p style={{ paddingTop: '10px' }}>
-                    This required extensive use of Babel and other plugins to
-                    make things work smoothly. It can be installed from the
-                    terminal window using the command:
-                  </p>
-                  <ul>
-                    <li>npx jsjournal serve</li>
-                  </ul>
+                <Typography variant="subtitle1">Summary</Typography>
+                <Typography variant="body2">
+                  This project is designed to allow a user to write and compile
+                  code in the browser. The information saves to a file on their
+                  local computer so that when they relaunch the application, all
+                  of their data is saved. Calls can be added, deleted, and
+                  reorganized.
                 </Typography>
+                <Typography variant="body2" style={{ paddingTop: '10px' }}>
+                  This required extensive use of Babel and other plugins to make
+                  things work smoothly. It can be installed from the terminal
+                  window using the command:
+                </Typography>
+                <ul>
+                  <li>
+                    <Typography variant="body2">npx jsjournal serve</Typography>
+                  </li>
+                </ul>
               </Box>
             </Grid>
             <Grid className={classes.grid} item xs={4}>
-              <Typography>
-                <h3>Technologies</h3>
+              <Typography variant="subtitle1">Technologies</Typography>
+              <Typography variant="body1">
                 <ol>
                   <li>Typescript</li>
                   <li>Node JS</li>
@@ -149,31 +147,29 @@ const Projects = (props) => {
 
       <Paper className={classes.card} elevation={3}>
         <Box className={classes.textContent}>
-          <Typography>
-            <h2 style={{ marginBottom: '0px' }}>Macro Calculator</h2>
+          <Typography variant="h3" style={{ marginBottom: '0px' }}>
+            Macro Calculator
           </Typography>
           <Grid container xs={12}>
             <Grid className={classes.grid} item xs={5}>
               <Box>
-                <Typography>
-                  <h3>Summary</h3>
-                  <p>
-                    This project is designed to help a user calculate their
-                    basal metabolic rate (BMR) and determine their macro
-                    breakdown in order to meet their fitness goals.
-                  </p>
-                  <p style={{ paddingTop: '10px' }}>
-                    They will enter their weight, height, activity level, and
-                    weight loss goal, and the program will calculate exactly how
-                    many grams of Protien, Fat and carbohydrate they should
-                    intake per day.
-                  </p>
+                <Typography variant="subtitle1">Summary</Typography>
+                <Typography variant="body2">
+                  This project is designed to help a user calculate their basal
+                  metabolic rate (BMR) and determine their macro breakdown in
+                  order to meet their fitness goals.
+                </Typography>
+                <Typography variant="body2" style={{ paddingTop: '10px' }}>
+                  They will enter their weight, height, activity level, and
+                  weight loss goal, and the program will calculate exactly how
+                  many grams of Protien, Fat and carbohydrate they should intake
+                  per day.
                 </Typography>
               </Box>
             </Grid>
             <Grid className={classes.grid} item xs={4}>
-              <Typography>
-                <h3>Technologies</h3>
+              <Typography variant="subtitle1">Technologies</Typography>
+              <Typography variant="body1">
                 <ol>
                   <li>Javascript</li>
                   <li>React</li>
@@ -210,14 +206,14 @@ const Projects = (props) => {
 
       <Paper className={classes.card} elevation={3}>
         <Box className={classes.textContent}>
-          <Typography>
-            <h2 style={{ marginBottom: '0px' }}>Speed Estimate</h2>
+          <Typography variant="h3" style={{ marginBottom: '0px' }}>
+            Speed Estimate
           </Typography>
           <Grid container xs={12}>
             <Grid className={classes.grid} item xs={5}>
               <Box>
-                <Typography>
-                  <h3>Summary</h3>
+                <Typography variant="subtitle1">Summary</Typography>
+                <Typography variant="body2">
                   This project allows a cyclist to enter their average power,
                   height, and weight, and the program will calculate their
                   approximate average speed if they were riding outdoors on a
@@ -226,8 +222,8 @@ const Projects = (props) => {
               </Box>
             </Grid>
             <Grid className={classes.grid} item xs={4}>
-              <Typography>
-                <h3>Technologies</h3>
+              <Typography variant="subtitle1">Technologies</Typography>
+              <Typography variant="body1">
                 <ol>
                   <li>Javascript</li>
                 </ol>

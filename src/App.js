@@ -5,20 +5,59 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import Main from './Pages/Main/Main.js';
 import Contact from './Pages/Contact/Contact.js';
 import MacroCalculator from './Projects/MacroCalculator/MacroCalculator.js';
-import {
-  blue,
-  green,
-  orange,
-  purple,
-  red,
-  yellow,
-} from '@material-ui/core/colors';
+import { blue, green, purple } from '@material-ui/core/colors';
 
 const theme = createTheme({
   palette: {
     primary: purple,
     secondary: blue,
     tertiary: green,
+  },
+
+  typography: {
+    fontFamily: 'Inter',
+    fontSize: 14,
+    h1: {
+      fontSize: '2rem',
+      marginBottom: '20px',
+      marginTop: '20px',
+    },
+    h2: {
+      fontSize: '1.5rem',
+      marginBottom: '20px',
+      marginTop: '20px',
+    },
+    h3: {
+      fontSize: '1.25rem',
+      marginBottom: '5px',
+      marginTop: '10px',
+      textTransform: 'uppercase',
+    },
+    h4: {
+      fontSize: '1rem',
+      marginBottom: '20px',
+      fontWeight: 700,
+      letterSpacing: '.1em',
+    },
+    h5: {
+      fontSize: '1rem',
+      marginBottom: '20px',
+    },
+    subtitle1: {
+      // fontWeight: 600,
+      letterSpacing: '.05em',
+      marginBottom: '5px',
+    },
+    body1: {
+      fontSize: '1rem',
+      lineHeight: 2.0,
+      marginBottom: '10px',
+    },
+    body2: {
+      fontSize: '.95rem',
+      lineHeight: 1.7,
+      marginBottom: '10px',
+    },
   },
 });
 

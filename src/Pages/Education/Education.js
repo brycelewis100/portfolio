@@ -71,10 +71,10 @@ const Education = (props) => {
   const classes = useStyles();
 
   return (
-    <Box>
-      <h1>Education</h1>
+    <Box id="education">
+      <Typography variant="h1">Education</Typography>
 
-      <h2>Self Study</h2>
+      <Typography variant="h2">Self Study</Typography>
 
       <SelfTaught
         title={`React and Typescript: Build a Portfolio Project`}
@@ -97,12 +97,12 @@ const Education = (props) => {
         course={'Instructor - Jonas Schedtmann'}
       />
 
-      <h2>Formal Education</h2>
+      <Typography variant="h2">Formal Education</Typography>
       <Paper className={classes.card} elevation={3}>
         <Grid container xs={12}>
           <Grid item xs={9} className={classes.textContent}>
             <Box>
-              <Typography variant="h6">University of Nevada Reno</Typography>
+              <Typography variant="h3">University of Nevada Reno</Typography>
               <Typography variant="subtitle1">
                 Bachelors of Science: Mechanical Engineering
               </Typography>
@@ -117,7 +117,7 @@ const Education = (props) => {
         </Grid>
       </Paper>
 
-      <h2>Competencies</h2>
+      <Typography variant="h2">Competencies</Typography>
       <Grid container xs={12}>
         <Grid item xs={3}>
           <Paper className={classes.logoCard} elevation={3}>
