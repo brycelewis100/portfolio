@@ -90,15 +90,6 @@ const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
       </Box>
 
       <Grid container className={classes.content}>
-        <Grid item xs={2} className={classes.buttonContainer}>
-          {btnLeft === '' ? (
-            <Button>{btnLeft}</Button>
-          ) : (
-            <Button href={routeString(btnLeft)} className={classes.button}>
-              {`< ${btnLeft}`}
-            </Button>
-          )}
-        </Grid>
         <Grid item xs={8}>
           <Box className={classes.heading}>
             <Typography variant="h1">{heading}</Typography>
@@ -106,15 +97,6 @@ const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
           <Box className={classes.caption}>
             <Typography variant="h5">{caption}</Typography>
           </Box>
-        </Grid>
-        <Grid item xs={2} className={classes.buttonContainer}>
-          {btnRight === '' ? (
-            <Button>{btnRight}</Button>
-          ) : (
-            <Button href={routeString(btnRight)} className={classes.button}>
-              {`${btnRight} >`}
-            </Button>
-          )}
         </Grid>
       </Grid>
     </Paper>

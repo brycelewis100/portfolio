@@ -1,15 +1,23 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
-import { makeStyles } from '@material-ui/core';
+import {
+  makeStyles,
+  Box,
+  Grid,
+  Typography,
+  Container,
+} from '@material-ui/core';
 
 import Hero from '../../Hero/Hero';
 import Footer from '../../Footer/Footer';
 
 import headshot from './Assets/Headshot.jpg';
 
+import Education from '../Education/Education';
+import Projects from '../Projects/Projects';
+
 const useStyles = makeStyles((theme) => ({
   headshot: {
-    width: '400px',
+    width: '100%',
     objectFit: 'cover',
     // justifySelf: 'center',
   },
@@ -36,10 +44,10 @@ const Main = (props) => {
         btnLeft={btnLeft}
         btnRight={btnRight}
       />
-      <Grid container>
-        <Grid item xs={6} style={{ alignSelf: 'center', padding: '50px' }}>
-          <Typography>
-            <h1>About me</h1>
+      <Container maxWidth="lg">
+        <Grid container>
+          <Grid item xs={6} style={{ alignSelf: 'center' }}>
+            <Typography variant="h4">About me</Typography>
             <p>
               I'm a Mechanical Engineering graduate from the University of
               Nevada Reno who is working to transition into Front-End Web
@@ -56,12 +64,18 @@ const Main = (props) => {
               React, Redux, and Node JS, and I am continuing to expand my
               skillset.
             </p>
-          </Typography>
+          </Grid>
+          <Grid item xs={6} className={classes.centerContainer}>
+            <img
+              src={headshot}
+              alt="headshot"
+              className={classes.headshot}
+            ></img>
+          </Grid>
         </Grid>
-        <Grid item xs={6} className={classes.centerContainer}>
-          <img src={headshot} alt="headshot" className={classes.headshot}></img>
-        </Grid>
-      </Grid>
+        <Education />
+        <Projects />
+      </Container>
       <Footer />
     </Box>
   );
