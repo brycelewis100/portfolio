@@ -18,28 +18,34 @@ const theme = createTheme({
     fontFamily: 'Inter',
     fontSize: 14,
     h1: {
+      fontSize: '5rem',
+      marginBottom: '20px',
+      marginTop: '20px',
+      letterSpacing: '-0.01em',
+    },
+    h2: {
       fontSize: '2rem',
       marginBottom: '20px',
       marginTop: '20px',
     },
-    h2: {
+    h3: {
       fontSize: '1.5rem',
       marginBottom: '20px',
       marginTop: '20px',
     },
-    h3: {
+    h4: {
       fontSize: '1.25rem',
       marginBottom: '5px',
       marginTop: '10px',
       textTransform: 'uppercase',
     },
-    h4: {
+    h5: {
       fontSize: '1rem',
       marginBottom: '20px',
       fontWeight: 700,
       letterSpacing: '.1em',
     },
-    h5: {
+    h6: {
       fontSize: '1rem',
       marginBottom: '20px',
     },

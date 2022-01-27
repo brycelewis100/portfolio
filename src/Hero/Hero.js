@@ -71,12 +71,6 @@ const useStyles = makeStyles((theme) => ({
 const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
   const classes = useStyles();
 
-  const routeString = (btnString) => {
-    const route = btnString.replace(/\s/g, '-').toLowerCase();
-
-    return `/${route}`;
-  };
-
   return (
     <Paper
       className={classes.section}
@@ -95,7 +89,7 @@ const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
             <Typography variant="h1">{heading}</Typography>
           </Box>
           <Box className={classes.caption}>
-            <Typography variant="h5">{caption}</Typography>
+            <Typography variant="h3">{caption}</Typography>
           </Box>
         </Grid>
       </Grid>

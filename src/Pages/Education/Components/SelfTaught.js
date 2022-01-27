@@ -29,7 +29,7 @@ const SelfTaught = ({ title, course }) => {
       <Grid container xs={12}>
         <Grid item xs={9} className={classes.textContent}>
           <Box>
-            <Typography variant="h3">{title}</Typography>
+            <Typography variant="h4">{title}</Typography>
             <Typography variant="subtitle1">{course}</Typography>
           </Box>
         </Grid>

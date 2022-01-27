@@ -47,7 +47,7 @@ const Main = (props) => {
       <Container maxWidth="lg">
         <Grid container>
           <Grid id="about-me" item xs={6} style={{ alignSelf: 'center' }}>
-            <Typography variant="h1">About me</Typography>
+            <Typography variant="h2">About me</Typography>
             <Typography variant="body1">
               I'm a Mechanical Engineering graduate from the University of
               Nevada Reno who is working to transition into Front-End Web
@@ -73,8 +73,8 @@ const Main = (props) => {
             ></img>
           </Grid>
         </Grid>
-        <Education id="education" />
-        <Projects id="projects" />
+        <Education />
+        <Projects />
       </Container>
       <Footer />
     </Box>

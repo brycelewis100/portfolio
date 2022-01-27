@@ -36,12 +36,15 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(5),
   },
   image: {
-    textAlign: 'right',
-    alignSelf: 'center',
+    width: '50%',
+    height: '50%',
+    objectFit: 'contain',
+    justifySelf: 'right',
     padding: theme.spacing(2),
   },
   card: {
     margin: '15px 15px 0px 15px',
+    display: 'flex',
   },
   logoCard: {
     margin: '15px 7.5px 0px 7.5px',
@@ -72,9 +75,9 @@ const Education = (props) => {
 
   return (
     <Box id="education">
-      <Typography variant="h1">Education</Typography>
+      <Typography variant="h2">Education</Typography>
 
-      <Typography variant="h2">Self Study</Typography>
+      <Typography variant="h3">Self Study</Typography>
 
       <SelfTaught
         title={`React and Typescript: Build a Portfolio Project`}
@@ -97,27 +100,27 @@ const Education = (props) => {
         course={'Instructor - Jonas Schedtmann'}
       />
 
-      <Typography variant="h2">Formal Education</Typography>
+      <Typography variant="h3">Formal Education</Typography>
       <Paper className={classes.card} elevation={3}>
         <Grid container xs={12}>
           <Grid item xs={9} className={classes.textContent}>
             <Box>
-              <Typography variant="h3">University of Nevada Reno</Typography>
+              <Typography variant="h4">University of Nevada Reno</Typography>
               <Typography variant="subtitle1">
                 Bachelors of Science: Mechanical Engineering
               </Typography>
               <Typography variant="subtitle1">3.95 GPA</Typography>
             </Box>
           </Grid>
-          <Grid item xs={3} className={classes.image}>
-            <Box>
-              <img src={N} alt="N"></img>
+          <Grid item xs={3}>
+            <Box textAlign="right">
+              <img src={N} alt="N" className={classes.image}></img>
             </Box>
           </Grid>
         </Grid>
       </Paper>
 
-      <Typography variant="h2">Competencies</Typography>
+      <Typography variant="h3">Competencies</Typography>
       <Grid container xs={12}>
         <Grid item xs={3}>
           <Paper className={classes.logoCard} elevation={3}>

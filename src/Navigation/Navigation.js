@@ -1,5 +1,6 @@
 import { Button, makeStyles, Grid, Container } from '@material-ui/core';
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -8,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     color: 'white',
+    textDecoration: 'none',
   },
   buttonContainer: {
     textAlign: 'center',
@@ -32,13 +34,25 @@ const Navigation = (props) => {
               </Button>
             </Grid>
             <Grid item xs={3} className={classes.buttonContainer}>
-              <Button href="#education" className={classes.button}>
-                Education
+              <Button className={classes.button}>
+                <AnchorLink
+                  className={classes.button}
+                  href="#education"
+                  offset="100"
+                >
+                  Education
+                </AnchorLink>
               </Button>
             </Grid>
             <Grid item xs={3} className={classes.buttonContainer}>
               <Button href="#projects" className={classes.button}>
-                Projects
+                <AnchorLink
+                  className={classes.button}
+                  href="#projects"
+                  offset="100"
+                >
+                  Projects
+                </AnchorLink>
               </Button>
             </Grid>
             <Grid item xs={3} className={classes.buttonContainer}>
