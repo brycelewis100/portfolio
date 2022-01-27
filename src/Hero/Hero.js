@@ -71,12 +71,6 @@ const useStyles = makeStyles((theme) => ({
 const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
   const classes = useStyles();
 
-  const routeString = (btnString) => {
-    const route = btnString.replace(/\s/g, '-').toLowerCase();
-
-    return `/${route}`;
-  };
-
   return (
     <Paper
       className={classes.section}
@@ -90,31 +84,13 @@ const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
       </Box>
 
       <Grid container className={classes.content}>
-        <Grid item xs={2} className={classes.buttonContainer}>
-          {btnLeft === '' ? (
-            <Button>{btnLeft}</Button>
-          ) : (
-            <Button href={routeString(btnLeft)} className={classes.button}>
-              {`< ${btnLeft}`}
-            </Button>
-          )}
-        </Grid>
         <Grid item xs={8}>
           <Box className={classes.heading}>
             <Typography variant="h1">{heading}</Typography>
           </Box>
           <Box className={classes.caption}>
-            <Typography variant="h5">{caption}</Typography>
+            <Typography variant="h3">{caption}</Typography>
           </Box>
-        </Grid>
-        <Grid item xs={2} className={classes.buttonContainer}>
-          {btnRight === '' ? (
-            <Button>{btnRight}</Button>
-          ) : (
-            <Button href={routeString(btnRight)} className={classes.button}>
-              {`${btnRight} >`}
-            </Button>
-          )}
         </Grid>
       </Grid>
     </Paper>
