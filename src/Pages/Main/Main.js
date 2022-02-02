@@ -46,7 +46,13 @@ const Main = (props) => {
       />
       <Container maxWidth="lg">
         <Grid container>
-          <Grid id="about-me" item xs={6} style={{ alignSelf: 'center' }}>
+          <Grid
+            id="about-me"
+            item
+            xs={12}
+            md={6}
+            style={{ alignSelf: 'center' }}
+          >
             <Typography variant="h2">About me</Typography>
             <Typography variant="body1">
               I'm a Mechanical Engineering graduate from the University of
@@ -65,7 +71,7 @@ const Main = (props) => {
               skillset.
             </Typography>
           </Grid>
-          <Grid item xs={6} className={classes.centerContainer}>
+          <Grid item xs={12} md={6} className={classes.centerContainer}>
             <img
               src={headshot}
               alt="headshot"
