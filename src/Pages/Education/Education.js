@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
   competencyButton: {
     width: '200px',
-    height: '212px',
+    height: 150,
     backgroundColor: 'transparent',
   },
 }));
@@ -122,7 +122,7 @@ const Education = (props) => {
 
       <Typography variant="h3">Competencies</Typography>
       <Grid container xs={12}>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() => window.open('https://www.javascript.com/')}
@@ -136,7 +136,7 @@ const Education = (props) => {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() => window.open('https://www.typescriptlang.org/')}
@@ -150,7 +150,7 @@ const Education = (props) => {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() => window.open('https://en.wikipedia.org/wiki/HTML')}
@@ -160,7 +160,7 @@ const Education = (props) => {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() => window.open('https://en.wikipedia.org/wiki/CSS')}
@@ -171,7 +171,7 @@ const Education = (props) => {
           </Paper>
         </Grid>
 
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() => window.open('https://github.com/brycelewis100')}
@@ -181,7 +181,7 @@ const Education = (props) => {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() => window.open('https://reactjs.org/')}
@@ -195,7 +195,7 @@ const Education = (props) => {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() => window.open('https://redux.js.org/')}
@@ -209,7 +209,7 @@ const Education = (props) => {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() =>
@@ -222,7 +222,7 @@ const Education = (props) => {
           </Paper>
         </Grid>
 
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() => window.open('https://www.solidworks.com/')}
@@ -236,7 +236,7 @@ const Education = (props) => {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() =>
@@ -248,7 +248,7 @@ const Education = (props) => {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() =>
@@ -260,7 +260,7 @@ const Education = (props) => {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>
             <Button
               onClick={() =>

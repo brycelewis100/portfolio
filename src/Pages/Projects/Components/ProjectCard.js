@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttons: {
     display: 'flex',
-    justifyContent: 'right',
+    justifyContent: 'center',
     paddingRight: theme.spacing(5),
   },
   button: {
@@ -47,8 +47,8 @@ const ProjectCard = ({ title, summary, tech, gh, view }) => {
         <Typography variant="h4" style={{ marginBottom: '0px' }}>
           {title}
         </Typography>
-        <Grid container xs={12}>
-          <Grid className={classes.grid} item xs={5}>
+        <Grid container>
+          <Grid className={classes.grid} item sm={6} md={5}>
             <Box>
               <Typography variant="subtitle1">Summary</Typography>
               {summary.map((p) => {
@@ -56,7 +56,7 @@ const ProjectCard = ({ title, summary, tech, gh, view }) => {
               })}
             </Box>
           </Grid>
-          <Grid className={classes.grid} item xs={4}>
+          <Grid className={classes.grid} item sm={6} md={4}>
             <Typography variant="subtitle1">Technologies</Typography>
             <Typography variant="body1">
               <ol>
@@ -66,7 +66,7 @@ const ProjectCard = ({ title, summary, tech, gh, view }) => {
               </ol>
             </Typography>
           </Grid>
-          <Grid className={classes.buttons} item xs={3}>
+          <Grid className={classes.buttons} item sm={12} md={3}>
             <Box className={classes.button}>
               {view && (
                 <Button href={view} variant="contained" color="primary">
