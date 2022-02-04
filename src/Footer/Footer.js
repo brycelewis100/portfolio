@@ -5,7 +5,7 @@ import Social from './Social';
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    height: '100px',
+    height: '6vh',
     backgroundColor: 'rgb(33, 33, 33)',
     marginTop: theme.spacing(2),
   },

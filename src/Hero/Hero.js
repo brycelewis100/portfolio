@@ -13,12 +13,12 @@ import Navigation from '../Navigation/Navigation';
 // import landscape from '../Assets/landscape.jpeg';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: '#666',
-    // height: '800px',
-  },
   section: {
+    margin: 0,
     height: '75vh',
+    width: '100%',
+    // position: 'absolute',
+    // zIndex: 1,
     // backgroundImage:
     //   ' url(https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?cs=srgb&dl=pexels-lumn-167699.jpg&fm=jpg)',
     backgroundSize: 'cover',
@@ -68,13 +68,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
+const Hero = ({ heading, caption, image }) => {
   const classes = useStyles();
 
   return (
-    <Paper
+    <div
       className={classes.section}
       style={{ backgroundImage: `url(${image})` }}
+      sx={{ borderColor: 'primary.main' }}
     >
       <div className={classes.overlay}></div>
       <Box className={classes.container}>
@@ -93,7 +94,7 @@ const Hero = ({ heading, caption, image, btnLeft, btnRight }) => {
           </Box>
         </Grid>
       </Grid>
-    </Paper>
+    </div>
   );
 };
 

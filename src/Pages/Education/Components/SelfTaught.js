@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles, Box, Grid, Paper, Typography } from '@material-ui/core';
 
 import UdemyLogo from '../Assets/Udemy.png';
+import { Translate } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   textContent: {
@@ -17,6 +18,13 @@ const useStyles = makeStyles((theme) => ({
   },
   udemy: {
     width: '75%',
+  },
+  imgContainer: {
+    display: 'flex',
+    justifyContent: 'right',
+    alignItems: 'center',
+    paddingRight: '10px',
+    height: '100%',
   },
 }));
 
@@ -34,13 +42,7 @@ const SelfTaught = ({ title, course }) => {
           </Box>
         </Grid>
         <Grid item xs={3} className={classes.image}>
-          <Box
-            style={{
-              display: 'flex',
-              justifyContent: 'right',
-              paddingRight: '10px',
-            }}
-          >
+          <Box className={classes.imgContainer}>
             <img className={classes.udemy} src={UdemyLogo} alt="udemy"></img>
           </Box>
         </Grid>

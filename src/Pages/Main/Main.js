@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   centerContainer: {
     textAlign: 'center',
   },
+  section: {
+    marginTop: theme.spacing(15),
+  },
 }));
 
 const Main = (props) => {
@@ -33,26 +36,18 @@ const Main = (props) => {
   const caption = 'Junior Front-End Developer';
   const image =
     'https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?cs=srgb&dl=pexels-lumn-167699.jpg&fm=jpg';
-  const btnLeft = '';
-  const btnRight = 'Education';
+
   return (
-    <Box>
+    <Box style={{ padding: 0 }}>
       <Hero
         heading={heading}
         caption={caption}
         image={image}
-        btnLeft={btnLeft}
-        btnRight={btnRight}
+        style={{ padding: 0 }}
       />
-      <Container maxWidth="lg">
-        <Grid container>
-          <Grid
-            id="about-me"
-            item
-            xs={12}
-            md={6}
-            style={{ alignSelf: 'center' }}
-          >
+      <Container id="about-me" maxWidth="lg">
+        <Grid container className={classes.section}>
+          <Grid item xs={12} md={6} style={{ alignSelf: 'center' }}>
             <Typography variant="h2">About me</Typography>
             <Typography variant="body1">
               I'm a Mechanical Engineering graduate from the University of
@@ -79,8 +74,12 @@ const Main = (props) => {
             ></img>
           </Grid>
         </Grid>
-        <Education />
-        <Projects />
+        <Box className={classes.section}>
+          <Education />
+        </Box>
+        <Box className={classes.section}>
+          <Projects />
+        </Box>
       </Container>
       <Footer />
     </Box>
