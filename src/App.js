@@ -78,6 +78,9 @@ let theme = createTheme({
       marginBottom: '10px',
     },
   },
+  shape: {
+    borderRadius: 0,
+  },
 });
 
 theme = responsiveFontSizes(theme, { factor: 5 });
@@ -136,9 +139,9 @@ theme = responsiveFontSizes(theme, { factor: 5 });
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} style={{ padding: 0 }}>
       <Router>
-        <div>
+        <div style={{ padding: 0 }}>
           <Switch>
             <Route exact path="/">
               <h1>Bryce Lewis Portfolio</h1>

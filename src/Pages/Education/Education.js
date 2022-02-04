@@ -45,6 +45,8 @@ const useStyles = makeStyles((theme) => ({
   card: {
     margin: '15px 15px 0px 15px',
     display: 'flex',
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   logoCard: {
     margin: '15px 7.5px 0px 7.5px',
@@ -113,7 +115,15 @@ const Education = (props) => {
             </Box>
           </Grid>
           <Grid item xs={3}>
-            <Box textAlign="right">
+            <Box
+              style={{
+                display: 'flex',
+                justifyContent: 'right',
+                alignItems: 'center',
+                paddingRight: '10px',
+                height: '100%',
+              }}
+            >
               <img src={N} alt="N" className={classes.image}></img>
             </Box>
           </Grid>

@@ -205,109 +205,139 @@ const OutputForm = ({
                   </RadioGroup>
                 </FormControl>
               </Grid>
-              <Grid item xs={6}>
+              <Grid
+                container
+                xs={12}
+                md={6}
+                style={{ justifyContent: 'center' }}
+              >
                 <Graph macroBreakdown={macroBreakdown} />
               </Grid>
+
               <Grid
-                item
-                xs={1}
-                style={{
-                  display: 'flex',
-                  justifyContent: 'right',
-                  paddingLeft: '20px',
-                  flexDirection: 'column',
-                }}
+                container
+                xs={12}
+                md={6}
+                style={{ justifyContent: 'center' }}
               >
-                <Box
-                  marginTop="125px"
-                  width="25px"
-                  height="25px"
-                  backgroundColor="#FDCA40"
-                />
-
-                <Box
-                  marginTop="55px"
-                  width="25px"
-                  height="25px"
-                  backgroundColor="#61210F"
-                />
-
-                <Box
-                  marginTop="55px"
-                  width="25px"
-                  height="25px"
-                  backgroundColor="#3066BE"
-                />
-              </Grid>
-              <Grid item xs={4}>
-                <Box
-                  component="form"
-                  sx={{
-                    '& > :not(style)': { m: 1.5, width: '15ch' },
+                <Grid
+                  xs={4}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
                   }}
-                  noValidate
-                  autoComplete="off"
-                  style={{ paddingTop: '100px' }}
                 >
-                  <TextField
-                    id="carbs"
-                    label="Carbs"
-                    variant="outlined"
-                    value={`${carbs} g`}
-                    InputProps={{
-                      readOnly: true,
-                    }}
-                  />
-                  <TextField
-                    id="carbs-percent"
-                    label=""
-                    variant="outlined"
-                    value={`${Math.round(
-                      Math.round(macroBreakdown.carbs * 100)
-                    )}%`}
-                    InputProps={{
-                      readOnly: true,
-                    }}
+                  <Box
+                    marginTop="125px"
+                    width="25px"
+                    height="25px"
+                    backgroundColor="#FDCA40"
+                    // marginLeft="auto"
                   />
 
-                  <TextField
-                    id="protien"
-                    label="Protien"
-                    variant="outlined"
-                    value={`${protien} g`}
-                    InputProps={{
-                      readOnly: true,
-                    }}
-                  />
-                  <TextField
-                    id="protien-percent"
-                    label=""
-                    variant="outlined"
-                    value={`${Math.round(macroBreakdown.protien * 100)}%`}
-                    InputProps={{
-                      readOnly: true,
-                    }}
+                  <Box
+                    marginTop="55px"
+                    width="25px"
+                    height="25px"
+                    backgroundColor="#61210F"
+                    // marginLeft="auto"
                   />
 
-                  <TextField
-                    id="fat"
-                    label="Fat"
-                    variant="outlined"
-                    value={`${fat} g`}
-                    InputProps={{
-                      readOnly: true,
-                    }}
+                  <Box
+                    marginTop="55px"
+                    width="25px"
+                    height="25px"
+                    backgroundColor="#3066BE"
+                    // marginLeft="auto"
                   />
-                  <TextField
-                    id="fat-percent"
-                    label=""
-                    variant="outlined"
-                    value={`${macroBreakdown.fat * 100}%`}
-                    InputProps={{
-                      readOnly: true,
+                </Grid>
+
+                <Grid xs={4}>
+                  <Box
+                    component="form"
+                    sx={{
+                      '& > :not(style)': { m: 1.5, width: '15ch' },
                     }}
-                  />
-                </Box>
+                    noValidate
+                    autoComplete="off"
+                    style={{ paddingTop: '100px' }}
+                  >
+                    <TextField
+                      id="carbs"
+                      label="Carbs"
+                      variant="outlined"
+                      value={`${carbs} g`}
+                      InputProps={{
+                        readOnly: true,
+                      }}
+                    />
+
+                    <TextField
+                      id="protien"
+                      label="Protien"
+                      variant="outlined"
+                      value={`${protien} g`}
+                      InputProps={{
+                        readOnly: true,
+                      }}
+                    />
+
+                    <TextField
+                      id="fat"
+                      label="Fat"
+                      variant="outlined"
+                      value={`${fat} g`}
+                      InputProps={{
+                        readOnly: true,
+                      }}
+                    />
+                  </Box>
+                </Grid>
+
+                <Grid xs={4}>
+                  <Box
+                    component="form"
+                    sx={{
+                      '& > :not(style)': { m: 1.5, width: '15ch' },
+                    }}
+                    noValidate
+                    autoComplete="off"
+                    style={{ paddingTop: '100px' }}
+                  >
+                    <TextField
+                      id="carbs-percent"
+                      label=""
+                      variant="outlined"
+                      value={`${Math.round(
+                        Math.round(macroBreakdown.carbs * 100)
+                      )}%`}
+                      InputProps={{
+                        readOnly: true,
+                      }}
+                    />
+
+                    <TextField
+                      id="protien-percent"
+                      label=""
+                      variant="outlined"
+                      value={`${Math.round(macroBreakdown.protien * 100)}%`}
+                      InputProps={{
+                        readOnly: true,
+                      }}
+                    />
+
+                    <TextField
+                      id="fat-percent"
+                      label=""
+                      variant="outlined"
+                      value={`${macroBreakdown.fat * 100}%`}
+                      InputProps={{
+                        readOnly: true,
+                      }}
+                    />
+                  </Box>
+                </Grid>
               </Grid>
             </Grid>
           </Paper>
