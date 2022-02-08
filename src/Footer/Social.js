@@ -1,4 +1,4 @@
-import { Grid, IconButton, Link } from '@material-ui/core';
+import { Grid, IconButton, Link, makeStyles } from '@material-ui/core';
 
 import React from 'react';
 
@@ -13,13 +13,20 @@ const socialItems = [
   },
 ];
 
+const useStyles = makeStyles((theme) => ({
+  icon: {
+    color: theme.palette.secondary.light,
+  },
+}));
+
 const Social = ({ direction }) => {
+  const classes = useStyles();
   return (
     <Grid container direction={direction || 'row'} spacing={3}>
       {socialItems.map((item) => (
         <Grid item key={item.url}>
           <Link href={item.url}>
-            <IconButton style={{ color: 'white' }}>
+            <IconButton className={classes.icon}>
               <item.icon />
             </IconButton>
           </Link>

@@ -33,8 +33,6 @@ const Contact = (props) => {
   const caption = 'This is my Contact';
   const image =
     'https://images.pexels.com/photos/3640930/pexels-photo-3640930.jpeg?cs=srgb&dl=pexels-ena-marinkovic-3640930.jpg&fm=jpg';
-  const btnLeft = 'Projects';
-  const btnRight = '';
 
   const [firstName, setFirstName] = React.useState('');
   const [lastName, setLastName] = React.useState('');
@@ -44,32 +42,31 @@ const Contact = (props) => {
 
   return (
     <Box>
-      <Hero
-        heading={heading}
-        caption={caption}
-        image={image}
-        btnLeft={btnLeft}
-        btnRight={btnRight}
-      />
+      <Hero heading={heading} caption={caption} image={image} />
       <Container maxWidth="lg">
         <Paper elevation={3} className={classes.paper}>
           <Grid container style={{ marginTop: '30px' }}>
-            <Grid className={classes.contactInfo} item xs={4}>
+            <Grid className={classes.contactInfo} item md={12} lg={4}>
               <Typography variant="h5"> Contact Information</Typography>
               <Typography>
                 Go ahead and fill out the form and I will get back to you within
                 24 hours
               </Typography>
-              <Typography variant="ul">
-                <li>brycelewis100@gmail.com</li>
-                <li>916-742-8175</li>
-              </Typography>
+
+              <ul>
+                <li>
+                  <Typography>brycelewis100@gmail.com</Typography>
+                </li>
+                <li>
+                  <Typography>916-742-8175</Typography>
+                </li>
+              </ul>
             </Grid>
-            <Grid item xs={8} className={classes.form}>
+            <Grid item md={12} lg={8} className={classes.form}>
               <Box
                 component="form"
                 sx={{
-                  '& > :not(style)': { m: 1, width: '45ch' },
+                  '& > :not(style)': { m: 1, width: '95%' },
                 }}
                 noValidate
                 autoComplete="off"
@@ -106,7 +103,7 @@ const Contact = (props) => {
               <Box
                 component="form"
                 sx={{
-                  '& > :not(style)': { m: 1, width: '92ch' },
+                  '& > :not(style)': { m: 1, width: '95%' },
                 }}
                 noValidate
                 autoComplete="off"

@@ -29,14 +29,8 @@ const Navigation = (props) => {
         <Grid item xs={12}>
           <Grid container>
             <Grid item xs={3} className={classes.buttonContainer}>
-              <Button className={classes.button}>
-                <AnchorLink
-                  className={classes.button}
-                  href="#about-me"
-                  offset="0"
-                >
-                  About Me
-                </AnchorLink>
+              <Button href="/about-me" className={classes.button}>
+                About Me
               </Button>
             </Grid>
             <Grid item xs={3} className={classes.buttonContainer}>

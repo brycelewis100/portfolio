@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  makeStyles,
-  Typography,
-  Grid,
-  Paper,
-} from '@material-ui/core';
+import { Box, makeStyles, Typography, Grid } from '@material-ui/core';
 import React from 'react';
 
 import Navigation from '../Navigation/Navigation';
@@ -78,9 +71,12 @@ const Hero = ({ heading, caption, image }) => {
       sx={{ borderColor: 'primary.main' }}
     >
       <div className={classes.overlay}></div>
+
       <Box className={classes.container}>
         <div className={classes.nav}>
-          <Navigation color="white" />
+          <Box display={{ xs: 'none', sm: 'block' }}>
+            <Navigation color="white" />
+          </Box>
         </div>
       </Box>
 
