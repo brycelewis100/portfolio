@@ -11,22 +11,32 @@ import Contact from './Pages/Contact/Contact.js';
 import MacroCalculator from './Projects/MacroCalculator/MacroCalculator.js';
 import { blue, green, purple } from '@material-ui/core/colors';
 
-// const breakpoints = {
-//   values: {
-//     xs: 0,
-//     sm: 0, // Phone
-//     md: 768, // Tablet/Laptop
-//     lg: 1350, // Desktop
-//   },
-// };
-
 let theme = createTheme({
   palette: {
-    primary: purple,
-    secondary: blue,
-    tertiary: green,
+    primary: {
+      dark: '#0c2431',
+      main: '#143B52',
+      light: '#8CC5E3',
+    },
+    secondary: {
+      dark: '#C16B49',
+      main: '#d8a28c',
+      light: '#FAF3F0',
+      contrastText: '#0c2431',
+    },
+    tertiary: {
+      main: '',
+    },
   },
-  // breakpoints,
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
   typography: {
     fontFamily: 'Verdana',
     fontSize: 14,
@@ -79,63 +89,11 @@ let theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 0,
+    borderRadius: 4,
   },
 });
 
-theme = responsiveFontSizes(theme, { factor: 5 });
-
-// theme.typography = {
-//   fontFamily: 'Verdana',
-//   fontSize: 14,
-//   h1: {
-//     fontSize: '5rem',
-//     marginBottom: '20px',
-//     marginTop: '20px',
-//     letterSpacing: '-0.01em',
-//   },
-//   h2: {
-//     fontSize: '2rem',
-//     marginBottom: '20px',
-//     marginTop: '20px',
-//   },
-//   h3: {
-//     fontSize: '1.5rem',
-//     marginBottom: '20px',
-//     marginTop: '20px',
-//   },
-//   h4: {
-//     fontSize: '1.25rem',
-//     marginBottom: '5px',
-//     marginTop: '10px',
-//     textTransform: 'uppercase',
-//   },
-//   h5: {
-//     fontSize: '1rem',
-//     marginBottom: '20px',
-//     fontWeight: 700,
-//     letterSpacing: '.1em',
-//   },
-//   h6: {
-//     fontSize: '1rem',
-//     marginBottom: '20px',
-//   },
-//   subtitle1: {
-//     // fontWeight: 600,
-//     letterSpacing: '.05em',
-//     marginBottom: '5px',
-//   },
-//   body1: {
-//     fontSize: '1rem',
-//     lineHeight: 2.0,
-//     marginBottom: '10px',
-//   },
-//   body2: {
-//     fontSize: '.95rem',
-//     lineHeight: 1.7,
-//     marginBottom: '10px',
-//   },
-// };
+theme = responsiveFontSizes(theme, { factor: 3 });
 
 function App() {
   return (

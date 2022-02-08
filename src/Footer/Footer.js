@@ -6,7 +6,7 @@ import Social from './Social';
 const useStyles = makeStyles((theme) => ({
   section: {
     height: '6vh',
-    backgroundColor: 'rgb(33, 33, 33)',
+    backgroundColor: theme.palette.primary.dark,
     marginTop: theme.spacing(2),
   },
   container: {
@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     color: 'white',
   },
+  button: {
+    backgroundColor: theme.palette.secondary.light,
+  },
 }));
 
 const Footer = (props) => {
@@ -28,7 +31,12 @@ const Footer = (props) => {
       <Container className={classes.container} maxWidth="lg">
         <Grid container className={classes.content}>
           <Grid item xs={6}>
-            <Button href="/contact" variant="outlined" color="secondary">
+            <Button
+              href="/contact"
+              variant="contained"
+              color="secondary"
+              className={classes.button}
+            >
               Get in touch
             </Button>
           </Grid>
