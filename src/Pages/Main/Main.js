@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   section: {
-    paddingTop: theme.spacing(15),
+    paddingTop: '5vh',
   },
   education: {
     backgroundColor: theme.palette.grey[100],

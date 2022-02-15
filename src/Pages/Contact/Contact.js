@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   Box,
   Grid,
@@ -9,6 +9,8 @@ import {
   Paper,
 } from '@mui/material';
 import { makeStyles } from '@material-ui/core';
+
+import emailjs from '@emailjs/browser';
 
 import Hero from '../../Hero/Hero';
 import Footer from '../../Footer/Footer';
@@ -28,17 +30,42 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Contact = (props) => {
+  const form = useRef();
   const classes = useStyles();
   const heading = 'Contact';
   const caption = 'This is my Contact';
   const image =
     'https://images.pexels.com/photos/3640930/pexels-photo-3640930.jpeg?cs=srgb&dl=pexels-ena-marinkovic-3640930.jpg&fm=jpg';
 
-  const [firstName, setFirstName] = React.useState('');
-  const [lastName, setLastName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [phone, setPhone] = React.useState('');
-  const [message, setMessage] = React.useState('');
+  const [subject, setSubject] = useState('');
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_t51n5ng',
+        'template_89w1dia',
+        form.current,
+        'user_sEERdJEmH2Wp7tJ06QQlJ'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    setSubject('');
+    setUserName('');
+    setUserEmail('');
+    setMessage('');
+  };
 
   return (
     <Box>
@@ -63,73 +90,60 @@ const Contact = (props) => {
               </ul>
             </Grid>
             <Grid item md={12} lg={8} className={classes.form}>
-              <Box
-                component="form"
-                sx={{
-                  '& > :not(style)': { m: 1, width: '95%' },
-                }}
-                noValidate
-                autoComplete="off"
-              >
-                <TextField
-                  id="first-name"
-                  label="First Name"
-                  variant="outlined"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                />
-                <TextField
-                  id="last-name"
-                  label="Last Name"
-                  variant="outlined"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                />
-                <TextField
-                  id="email"
-                  label="Email"
-                  variant="outlined"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <TextField
-                  id="phone"
-                  label="Phone (optional)"
-                  variant="outlined"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-              </Box>
-              <Box
-                component="form"
-                sx={{
-                  '& > :not(style)': { m: 1, width: '95%' },
-                }}
-                noValidate
-                autoComplete="off"
-              >
-                <TextField
-                  id="Message"
-                  label="Message"
-                  placeholder="Write your message"
-                  multiline
-                  rows={10}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-              </Box>
-              <Box className={classes.buttonContainer}>
-                <Button
-                  className={classes.submitButton}
-                  variant="contained"
-                  color="primary"
-                  onClick={() => {
-                    console.log(firstName, lastName, email, phone, message);
+              <form ref={form} onSubmit={sendEmail}>
+                <Box
+                  sx={{
+                    '& > :not(style)': { m: 1, width: '95%' },
                   }}
+                  noValidate
+                  autoComplete="off"
                 >
-                  Send Message
-                </Button>
-              </Box>
+                  <TextField
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    label="Subject"
+                    variant="outlined"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                  />
+                  <TextField
+                    id="user_name"
+                    name="user_name"
+                    type="text"
+                    label="Name"
+                    variant="outlined"
+                    value={userName}
+                    onChange={(e) => setUserName(e.target.value)}
+                  />
+                  <TextField
+                    id="user_email"
+                    name="user_email"
+                    type="text"
+                    label="Email"
+                    variant="outlined"
+                    value={userEmail}
+                    onChange={(e) => setUserEmail(e.target.value)}
+                  />
+                  <TextField
+                    id="message"
+                    name="message"
+                    type="text"
+                    label="Message"
+                    variant="outlined"
+                    placeholder="Write your message"
+                    multiline
+                    rows={10}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </Box>
+                <Box className={classes.buttonContainer}>
+                  <Button variant="contained" type="submit">
+                    Send
+                  </Button>
+                </Box>
+              </form>
             </Grid>
           </Grid>
         </Paper>
@@ -139,3 +153,36 @@ const Contact = (props) => {
 };
 
 export default Contact;
+
+// return (
+//   <form ref={form} onSubmit={sendEmail}>
+//     <TextField
+//       id="subject"
+//       name="subject"
+//       type="text"
+//       label="Subject"
+//       variant="outlined"
+//     />
+//     <TextField
+//       id="user_name"
+//       name="user_name"
+//       type="text"
+//       label="Name"
+//       variant="outlined"
+//     />
+//     <TextField
+//       id="user_email"
+//       name="user_email"
+//       type="text"
+//       label="Email"
+//       variant="outlined"
+//     />
+//     <TextField
+//       id="message"
+//       name="message"
+//       type="text"
+//       label="Message"
+//       variant="outlined"
+//     />
+//     <input type="submit" value="Send" />
+//   </form>
