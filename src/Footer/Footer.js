@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
   },
   button: {
-    backgroundColor: theme.palette.secondary.light,
+    backgroundColor: theme.palette.grey[100],
   },
 }));
 

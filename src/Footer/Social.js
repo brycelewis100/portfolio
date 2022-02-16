@@ -15,7 +15,7 @@ const socialItems = [
 
 const useStyles = makeStyles((theme) => ({
   icon: {
-    color: theme.palette.secondary.light,
+    color: theme.palette.grey[200],
   },
 }));
 

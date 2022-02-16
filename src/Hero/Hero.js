@@ -8,7 +8,7 @@ import Navigation from '../Navigation/Navigation';
 const useStyles = makeStyles((theme) => ({
   section: {
     margin: 0,
-    height: '75vh',
+    height: '65vh',
     width: '100%',
     // position: 'absolute',
     // zIndex: 1,
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   overlay: {
     backgroundColor: 'rgba(33, 33, 33, 0.2)',
-    height: '75vh',
+    height: '65vh',
     width: '100%',
     position: 'absolute',
     zIndex: 2,
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Hero = ({ heading, caption, image }) => {
+const Hero = ({ heading, caption, image, main }) => {
   const classes = useStyles();
 
   return (
@@ -75,7 +75,7 @@ const Hero = ({ heading, caption, image }) => {
       <Box className={classes.container}>
         <div className={classes.nav}>
           <Box display={{ xs: 'none', sm: 'block' }}>
-            <Navigation color="white" />
+            <Navigation color="white" main={main} />
           </Box>
         </div>
       </Box>

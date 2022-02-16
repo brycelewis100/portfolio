@@ -9,7 +9,6 @@ import {
 import Main from './Pages/Main/Main.js';
 import Contact from './Pages/Contact/Contact.js';
 import MacroCalculator from './Projects/MacroCalculator/MacroCalculator.js';
-import { blue, green, purple } from '@material-ui/core/colors';
 
 let theme = createTheme({
   palette: {
@@ -23,9 +22,6 @@ let theme = createTheme({
       main: '#d8a28c',
       light: '#FAF3F0',
       contrastText: '#0c2431',
-    },
-    tertiary: {
-      main: '',
     },
   },
   breakpoints: {
@@ -101,8 +97,8 @@ function App() {
       <Router>
         <div style={{ padding: 0 }}>
           <Switch>
-            <Route exact path="/">
-              <h1>Bryce Lewis Portfolio</h1>
+            <Route exact path="/" component={Main}>
+              {/* <h1>Bryce Lewis Portfolio</h1> */}
             </Route>
             <Route exact path="/about-me" component={Main} />
             <Route exact path="/contact" component={Contact} />
