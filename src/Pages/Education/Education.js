@@ -70,6 +70,9 @@ const useStyles = makeStyles((theme) => ({
     height: 150,
     backgroundColor: 'transparent',
   },
+  heading: {
+    paddingTop: '2vh',
+  },
 }));
 
 const Education = (props) => {
@@ -79,7 +82,9 @@ const Education = (props) => {
     <Box id="education">
       <Typography variant="h2">Education</Typography>
 
-      <Typography variant="h3">Self Study</Typography>
+      <Typography variant="h3" className={classes.heading}>
+        Self Study
+      </Typography>
 
       <SelfTaught
         title={`React and Typescript: Build a Portfolio Project`}
@@ -102,7 +107,9 @@ const Education = (props) => {
         course={'Instructor - Jonas Schedtmann'}
       />
 
-      <Typography variant="h3">Formal Education</Typography>
+      <Typography variant="h3" className={classes.heading}>
+        Formal Education
+      </Typography>
       <Paper className={classes.card} elevation={3}>
         <Grid container xs={12}>
           <Grid item xs={9} className={classes.textContent}>
@@ -130,7 +137,9 @@ const Education = (props) => {
         </Grid>
       </Paper>
 
-      <Typography variant="h3">Competencies</Typography>
+      <Typography variant="h3" className={classes.heading}>
+        Competencies
+      </Typography>
       <Grid container xs={12}>
         <Grid item xs={6} md={3}>
           <Paper className={classes.logoCard} elevation={3}>

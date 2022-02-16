@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+
 import {
+  makeStyles,
   Box,
   Grid,
   Typography,
@@ -7,13 +9,14 @@ import {
   TextField,
   Container,
   Paper,
-} from '@mui/material';
-import { makeStyles } from '@material-ui/core';
+  IconButton,
+  Link,
+} from '@material-ui/core';
 
 import emailjs from '@emailjs/browser';
 
 import Hero from '../../Hero/Hero';
-import Footer from '../../Footer/Footer';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles((theme) => ({
   contactInfo: {
@@ -21,26 +24,68 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonContainer: {
     display: 'flex',
-    justifyContent: 'right',
+    justifyContent: 'space-between',
     margin: theme.spacing(2),
+  },
+  paper: {
+    marginBottom: '2.5vh',
   },
   form: {
     marginTop: theme.spacing(2),
+    paddingLeft: 5,
+  },
+  button: {
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.grey[100],
+
+    '&:hover': {
+      backgroundColor: theme.palette.primary.light,
+      color: theme.palette.primary.dark,
+    },
   },
 }));
 
+const useMatchMedia = (mediaQuery, initialValue) => {
+  const [isMatching, setIsMatching] = useState(initialValue);
+  useEffect(() => {
+    const watcher = window.matchMedia(mediaQuery);
+    setIsMatching(watcher.matches);
+    const listener = (matches) => {
+      setIsMatching(matches.matches);
+    };
+    if (watcher.addEventListener) {
+      watcher.addEventListener('change', listener);
+    } else {
+      watcher.addListener(listener);
+    }
+    return () => {
+      if (watcher.removeEventListener) {
+        return watcher.removeEventListener('change', listener);
+      } else {
+        return watcher.removeListener(listener);
+      }
+    };
+  }, [mediaQuery]);
+
+  return isMatching;
+};
+
 const Contact = (props) => {
-  const form = useRef();
   const classes = useStyles();
+
+  const form = useRef();
+
   const heading = 'Contact';
-  const caption = 'This is my Contact';
+  const caption = `Let's connect!`;
   const image =
-    'https://images.pexels.com/photos/3640930/pexels-photo-3640930.jpeg?cs=srgb&dl=pexels-ena-marinkovic-3640930.jpg&fm=jpg';
+    'https://images.pexels.com/photos/1419923/pexels-photo-1419923.jpeg?cs=srgb&dl=pexels-lukas-1419923.jpg&fm=jpg';
 
   const [subject, setSubject] = useState('');
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  const isMobile = useMatchMedia('(max-width:600px)', true);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -69,15 +114,19 @@ const Contact = (props) => {
 
   return (
     <Box>
-      <Hero heading={heading} caption={caption} image={image} />
+      <Hero heading={heading} caption={caption} image={image} main={false} />
       <Container maxWidth="lg">
         <Paper elevation={3} className={classes.paper}>
           <Grid container style={{ marginTop: '30px' }}>
             <Grid className={classes.contactInfo} item md={12} lg={4}>
               <Typography variant="h5"> Contact Information</Typography>
               <Typography>
-                Go ahead and fill out the form and I will get back to you within
-                24 hours
+                Feel free to shoot me an email, give me a call, or connect with
+                me on LinkedIn.
+              </Typography>
+              <Typography>
+                If you'd rather leave a message, please share your information
+                through the contact form and I'll be in touch within 24 hours.
               </Typography>
 
               <ul>
@@ -86,6 +135,13 @@ const Contact = (props) => {
                 </li>
                 <li>
                   <Typography>916-742-8175</Typography>
+                </li>
+                <li>
+                  <Link href="https://www.linkedin.com/in/bryce-lewis-unr/">
+                    <IconButton>
+                      <LinkedInIcon />
+                    </IconButton>
+                  </Link>
                 </li>
               </ul>
             </Grid>
@@ -139,7 +195,16 @@ const Contact = (props) => {
                   />
                 </Box>
                 <Box className={classes.buttonContainer}>
-                  <Button variant="contained" type="submit">
+                  {isMobile && (
+                    <Button variant="contained" href="/about-me">
+                      Back to Home
+                    </Button>
+                  )}
+                  <Button
+                    variant="contained"
+                    type="submit"
+                    className={classes.button}
+                  >
                     Send
                   </Button>
                 </Box>
@@ -153,36 +218,3 @@ const Contact = (props) => {
 };
 
 export default Contact;
-
-// return (
-//   <form ref={form} onSubmit={sendEmail}>
-//     <TextField
-//       id="subject"
-//       name="subject"
-//       type="text"
-//       label="Subject"
-//       variant="outlined"
-//     />
-//     <TextField
-//       id="user_name"
-//       name="user_name"
-//       type="text"
-//       label="Name"
-//       variant="outlined"
-//     />
-//     <TextField
-//       id="user_email"
-//       name="user_email"
-//       type="text"
-//       label="Email"
-//       variant="outlined"
-//     />
-//     <TextField
-//       id="message"
-//       name="message"
-//       type="text"
-//       label="Message"
-//       variant="outlined"
-//     />
-//     <input type="submit" value="Send" />
-//   </form>

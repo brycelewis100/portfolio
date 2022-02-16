@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navigation = (props) => {
+const Navigation = ({ main }) => {
   const classes = useStyles();
 
   return (
@@ -33,27 +33,32 @@ const Navigation = (props) => {
                 About Me
               </Button>
             </Grid>
+
             <Grid item xs={3} className={classes.buttonContainer}>
-              <Button className={classes.button}>
-                <AnchorLink
-                  className={classes.button}
-                  href="#education"
-                  offset="100"
-                >
-                  Education
-                </AnchorLink>
-              </Button>
+              {main && (
+                <Button className={classes.button}>
+                  <AnchorLink
+                    className={classes.button}
+                    href="#education"
+                    offset="100"
+                  >
+                    Education
+                  </AnchorLink>
+                </Button>
+              )}
             </Grid>
             <Grid item xs={3} className={classes.buttonContainer}>
-              <Button href="#projects" className={classes.button}>
-                <AnchorLink
-                  className={classes.button}
-                  href="#projects"
-                  offset="100"
-                >
-                  Projects
-                </AnchorLink>
-              </Button>
+              {main && (
+                <Button href="#projects" className={classes.button}>
+                  <AnchorLink
+                    className={classes.button}
+                    href="#projects"
+                    offset="100"
+                  >
+                    Projects
+                  </AnchorLink>
+                </Button>
+              )}
             </Grid>
             <Grid item xs={3} className={classes.buttonContainer}>
               <Button href="/contact" className={classes.button}>

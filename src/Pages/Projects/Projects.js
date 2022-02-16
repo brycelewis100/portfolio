@@ -28,7 +28,7 @@ const Projects = (props) => {
         gh="https://github.com/brycelewis100/jsjournal"
         view={null}
       />
-
+      {/* 
       <ProjectCard
         title="Speed Estimate"
         summary={[
@@ -37,7 +37,7 @@ const Projects = (props) => {
         tech={['Javascript']}
         gh={null}
         view={null}
-      />
+      /> */}
 
       <ProjectCard
         title="Macro Calculator"
