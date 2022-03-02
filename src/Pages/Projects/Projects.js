@@ -11,7 +11,7 @@ const Projects = (props) => {
       <ProjectCard
         title="Portfolio Website"
         summary={[
-          ' This project is designed to showcase my web development competence',
+          ' This project is designed to showcase my web development competence, and is built with an emphasis on reusable React components to improve ease of maintanance and expansion.',
         ]}
         tech={['Javascript', 'React', 'Material UI']}
         gh="https://github.com/brycelewis100/portfolio"
@@ -23,8 +23,9 @@ const Projects = (props) => {
         summary={[
           'This project is designed to allow a user to write and compile code in the browser. The information saves to a file on their local computer so that when they relaunch the application, all of their data is saved. Calls can be added, deleted, andreorganized.',
           'This required extensive use of Babel and other plugins to make things work smoothly. It can be installed from the terminal window using the command:',
+          '> npx jsjournal serve',
         ]}
-        tech={['Typescript', 'NodeJS', 'React', 'Babel', 'Webpack']}
+        tech={['Typescript', 'NodeJS', 'React', 'Redux', 'Babel', 'Webpack']}
         gh="https://github.com/brycelewis100/jsjournal"
         view={null}
       />
@@ -43,7 +44,7 @@ const Projects = (props) => {
         title="Macro Calculator"
         summary={[
           'This project is designed to help a user calculate their basal metabolic rate (BMR) and determine their macro breakdown in order to meet their fitness goals.',
-          'They will enter their weight, height, activity level, and weight loss goal, and the program will calculate exactly how many grams of Protien, Fat and carbohydrate they should intake per day.',
+          'They will enter their weight, height, activity level, and weight loss goal, and the program will calculate how many grams of Protien, Fat, and Carbohydrate they should intake per day.',
         ]}
         tech={['Javascript', 'React']}
         gh="https://github.com/brycelewis100/portfolio/tree/production/src/Projects/MacroCalculator"
