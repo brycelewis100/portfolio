@@ -1,3 +1,3 @@
 ## Portfolio Website README.md
 
-You can view the hosted, production website at brycelewis.net
+You can view the production website at brycelewis.net
