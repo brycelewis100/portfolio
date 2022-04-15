@@ -17,7 +17,7 @@ const Event = ({
   console.log(date);
   return (
     <Box>
-      <Card style={{ padding: 60, marginTop: 20 }}>
+      <Card style={{ padding: '2.5vw', marginTop: 20 }}>
         <Box
           style={{
             display: 'flex',
