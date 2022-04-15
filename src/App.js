@@ -9,6 +9,7 @@ import {
 import Main from './Pages/Main/Main.js';
 import Contact from './Pages/Contact/Contact.js';
 import MacroCalculator from './Projects/MacroCalculator/MacroCalculator.js';
+import { BiggestLittleRacing } from './Projects/biggest-little-racing/BiggestLittleRacing.js';
 
 let theme = createTheme({
   palette: {
@@ -106,6 +107,11 @@ function App() {
               exact
               path="/projects/macro-calculator"
               component={MacroCalculator}
+            />
+            <Route
+              exact
+              path="/projects/biggest-little-racing"
+              component={BiggestLittleRacing}
             />
           </Switch>
         </div>
