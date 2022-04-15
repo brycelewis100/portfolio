@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Event from './Event';
-// import PeavineMap from '../Maps/Peavine.jpg';
+import PeavineMap from '../Maps/Peavine.jpeg';
 
 const EventList = () => {
   return (
@@ -45,9 +45,14 @@ const EventList = () => {
           },
         ]}
         eventType={'enduro'}
-        courseMap={
-          'http://www.battlebornenduro.org/wp-content/uploads/2014/03/2016-Course-Map.jpg'
-        }
+        courseMap={PeavineMap}
+        camping={{
+          link: 'https://www.google.com/maps/dir//39.584944,-119.903525/@39.5849481,-119.9057137,755m/data=!3m1!1e3!4m11!1m8!3m7!1s0x0:0x38a66cd0236952a4!2zMznCsDM1JzA1LjgiTiAxMTnCsDU0JzEyLjciVw!3b1!7e2!8m2!3d39.5849439!4d-119.9035249!4m1!3e1',
+          latlng: {
+            lat: 39.584944,
+            lng: -119.903525,
+          },
+        }}
       />
 
       {/* <Event

@@ -1,15 +1,23 @@
 import React from 'react';
 
 import { Box, Card, Typography, Grid, Link, Button } from '@mui/material';
-import GoogleMapReact from 'google-map-react';
 
-import SimpleMap from './Map';
+import CampingMap from './CampingMap';
 
-const Event = ({ title, date, description, img, links, rsvp, courseMap }) => {
+const Event = ({
+  title,
+  date,
+  description,
+  img,
+  links,
+  rsvp,
+  courseMap,
+  camping,
+}) => {
   console.log(date);
   return (
     <Box>
-      <Card style={{ padding: 40, marginTop: 20 }}>
+      <Card style={{ padding: 60, marginTop: 20 }}>
         <Box
           style={{
             display: 'flex',
@@ -22,7 +30,7 @@ const Event = ({ title, date, description, img, links, rsvp, courseMap }) => {
           {date && <Typography variant="h6">{date.toDateString()}</Typography>}
         </Box>
         <Grid container>
-          <Grid item xs={6} style={{ paddingRight: 10 }}>
+          <Grid item xs={12} style={{ paddingBottom: 30 }}>
             <Box
               style={{
                 // display: 'flex',
@@ -37,7 +45,7 @@ const Event = ({ title, date, description, img, links, rsvp, courseMap }) => {
               ></img>
             </Box>
           </Grid>
-          <Grid item xs={6} style={{ paddingLeft: 10 }}>
+          <Grid item xs={12}>
             {description.map((paragraph) => {
               return (
                 <Typography style={{ paddingBottom: 10 }}>
@@ -45,31 +53,13 @@ const Event = ({ title, date, description, img, links, rsvp, courseMap }) => {
                 </Typography>
               );
             })}
-
-            <Grid
-              container
-              style={{
-                display: 'flex',
-                textAlign: 'left',
-                alignItems: 'center',
-              }}
-            >
-              <Grid
-                item
-                xs={6}
-                style={{ display: 'flex', justifyContent: 'space-between' }}
-              ></Grid>
-            </Grid>
           </Grid>
-        </Grid>
-
-        <h2>Stages:</h2>
-        <Grid container>
+          <h2>Stages:</h2>
           <Grid item xs={12}>
             {links.map((link, i) => {
               return (
                 <Typography>
-                  <Link href={link.link}>{`Stage ${i + 1}: ${
+                  <Link href={link.link} target="_blank">{`Stage ${i + 1}: ${
                     link.stageName
                   }`}</Link>
                 </Typography>
@@ -86,7 +76,12 @@ const Event = ({ title, date, description, img, links, rsvp, courseMap }) => {
           </Grid>
           <Grid item xs={12}>
             <h2>Camping</h2>
-            <SimpleMap />
+            <div style={{ marginBottom: 20 }}>
+              <Typography>
+                <Link href={camping.link}>Directions</Link>
+              </Typography>
+            </div>
+            <CampingMap camping={camping} />
           </Grid>
         </Grid>
       </Card>
