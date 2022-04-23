@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, Card, Typography, Grid, Link, Button } from '@mui/material';
 
 import CampingMap from './CampingMap';
+import ContactForm from './ContactForm';
 
 const Event = ({
   title,
@@ -26,8 +27,8 @@ const Event = ({
             paddingBottom: 20,
           }}
         >
-          <Typography variant="h4">{title}</Typography>
-          {date && <Typography variant="h6">{date.toDateString()}</Typography>}
+          <Typography variant="h2">{title}</Typography>
+          {date && <Typography variant="h4">{date.toDateString()}</Typography>}
         </Box>
         <Grid container>
           <Grid item xs={12} style={{ paddingBottom: 30 }}>
@@ -54,7 +55,7 @@ const Event = ({
               );
             })}
           </Grid>
-          <h2>Stages:</h2>
+          <h2>Stages: (Final Stage Order TBD)</h2>
           <Grid item xs={12}>
             {links.map((link, i) => {
               return (
@@ -75,13 +76,14 @@ const Event = ({
             ></img>
           </Grid>
           <Grid item xs={12}>
-            <h2>Camping</h2>
+            <h2>Camping: (Final Details TBD)</h2>
             <div style={{ marginBottom: 20 }}>
               <Typography>
                 <Link href={camping.link}>Directions</Link>
               </Typography>
             </div>
             <CampingMap camping={camping} />
+            <ContactForm />
           </Grid>
         </Grid>
       </Card>
