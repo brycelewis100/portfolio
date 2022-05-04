@@ -55,7 +55,7 @@ const Event = ({
               );
             })}
           </Grid>
-          <h2>Stages: (Final Stage Order TBD)</h2>
+          <h2>Stages:</h2>
           <Grid item xs={12}>
             {links.map((link, i) => {
               return (
@@ -76,13 +76,13 @@ const Event = ({
             ></img>
           </Grid>
           <Grid item xs={12}>
-            <h2>Camping: (Final Details TBD)</h2>
+            {/* <h2>Camping: (Final Details TBD)</h2>
             <div style={{ marginBottom: 20 }}>
               <Typography>
                 <Link href={camping.link}>Directions</Link>
               </Typography>
             </div>
-            <CampingMap camping={camping} />
+            <CampingMap camping={camping} /> */}
             <ContactForm />
           </Grid>
         </Grid>

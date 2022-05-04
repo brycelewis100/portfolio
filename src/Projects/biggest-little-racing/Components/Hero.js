@@ -24,14 +24,14 @@ export default Hero;
 
 const SectionDiv = styled.div`
   margin: 0;
-  height: 65vh;
+  height: 50vh;
   width: 100%;
   background-size: cover;
 `;
 
 const Overlay = styled.div`
   background-color: rgba(33, 33, 33, 0.2);
-  height: 65vh;
+  height: 50vh;
   width: 100%;
   position: absolute;
   z-index: 2;

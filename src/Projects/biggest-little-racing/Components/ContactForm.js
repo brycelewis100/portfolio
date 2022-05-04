@@ -83,7 +83,7 @@ const ContactForm = () => {
             <Typography variant="h5"> Contact Information</Typography>
             <Typography>
               If you have any questions, or would like to let me know you're
-              coming, just shoot me (Bryce) an email though this form 👍
+              coming, just shoot me an email though this form 👍
             </Typography>
           </Grid>
           <Grid item md={12} lg={8} className={classes.form}>
