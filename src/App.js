@@ -110,7 +110,7 @@ function App() {
             />
             <Route
               exact
-              path="/projects/biggest-little-racing"
+              path="/biggest-little-racing"
               component={BiggestLittleRacing}
             />
           </Switch>
