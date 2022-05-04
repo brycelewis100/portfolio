@@ -11,18 +11,13 @@ const EventList = () => {
         date={new Date('May 14, 2022')}
         description={[
           'We’re bringing free grassroots racing to Reno!',
-          'Inspired by the Tears Fears and Beers Enduro organized by our friends out in Ely, my goal with this series is to combine the energy of a race weekend with the laid back vibe of a big local group ride.  There will be camping, there will be racing, and there will be beer 🍺.',
-          'To keep things simple, we will be using Strava to time the event, and we will be following the course map from the 2016 CES.While the group ride will take place on Saturday May 14th, I will count any and all racers who complete the 6 stages in one single ride anytime in the week leading up to the event.',
-          'For camping, we plan to camp out on Friday May 13th on Peavine BLM land, you can find link for the location in this post.  Be sure to bring everything you’ll need to pack out all your trash so that we can leave area better than we found it.',
-          'I’m still working out the details of the route, so stay tuned for updates.  I’d like to figure out a route where we can roll out from the campsite, but the details still need ironed out. Keep in mind that final details such as camping location, stage order, and start location are TBD.',
+          'Inspired by the Tears Fears and Beers Enduro organized by our friends out in Ely, my goal with this series is to get the community together to enjoy big days on the bike. In the future I’d like to organize events that incorporate camping and racing into one big weekend, but for this first event, we’ll just stick to racing.',
+          'To keep things simple, I will be using Strava to time the event, and we will be following the course map from the 2016 CES. Anyone who completes all 6 stages before I calculate the results on the evening of Mach 15th will be counted in the final results.',
+          'For those that want to roll out as a group, the main “event” will start at the softball fields on Saturday, May 15th at 9:30am. ',
           'I hope to see you out there!',
         ]}
         img={'https://ep1.pinkbike.org/p5pb13495230/p5pb13495230.jpg'}
         links={[
-          {
-            link: 'https://www.strava.com/segments/7290236?filter=overall',
-            stageName: 'N Trail',
-          },
           {
             link: 'https://www.strava.com/segments/12083231?filter=overall',
             stageName: 'B Lite',
@@ -43,16 +38,20 @@ const EventList = () => {
             link: 'https://www.strava.com/segments/12077700?filter=overall',
             stageName: 'UNR DH',
           },
+          {
+            link: 'https://www.strava.com/segments/7290236?filter=overall',
+            stageName: 'N Trail',
+          },
         ]}
         eventType={'enduro'}
         courseMap={PeavineMap}
-        camping={{
-          link: 'https://www.google.com/maps/dir//39.589005,-119.875771/@39.5890091,-119.8779597,1251m/data=!3m1!1e3!4m2!4m1!3e0',
-          latlng: {
-            lat: 39.589005,
-            lng: -119.875771,
-          },
-        }}
+        // camping={{
+        //   link: 'https://www.google.com/maps/dir//39.589005,-119.875771/@39.5890091,-119.8779597,1251m/data=!3m1!1e3!4m2!4m1!3e0',
+        //   latlng: {
+        //     lat: 39.589005,
+        //     lng: -119.875771,
+        //   },
+        // }}
       />
 
       {/* <Event
